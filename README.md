@@ -1,19 +1,10 @@
-# JwtElixir
+# Jwt autenticación API con Elixir 1.7.3 y Phoenix 1.4
 
-To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+Para iniciar el server con Phoenix:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  * Instalar dependencias con `mix deps.get`
+  * Crear y migrar la base de datos con `mix ecto.setup`
+  * Iniciar server con `mix phx.server`
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Ahora ingresa a [`localhost:4000`](http://localhost:4000) desde el navegador.
