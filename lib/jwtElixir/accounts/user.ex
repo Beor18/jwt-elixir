@@ -20,8 +20,8 @@ defmodule JwtElixir.Accounts.User do
   @doc false
   def changeset(%User{} = user, attrs) do
     user
-    |> cast(attrs, [:email, :password_hash, :password_confirmation])
-    |> validate_required([:email, :password_hash, :password_confirmation])
+    |> cast(attrs, [:email, :password, :password_confirmation])
+    |> validate_required([:email, :password, :password_confirmation])
     |> validate_format(:email, ~r/@/)
     |> validate_length(:password, min: 8)
     |> validate_confirmation(:password)
@@ -33,7 +33,7 @@ defmodule JwtElixir.Accounts.User do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}}
         ->
-          put_change(changeset, :password_hash, Comeonin.Bcrypt.hashpwsalt(pass))
+          put_change(changeset, :password_hash, hashpwsalt(pass))
       _ ->
           changeset
     end
