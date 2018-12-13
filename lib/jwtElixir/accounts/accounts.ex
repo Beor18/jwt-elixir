@@ -39,6 +39,7 @@ defmodule JwtElixir.Accounts do
           {:error, "Login Error"}
       user ->
           {:ok, user}
+    end
   end
 
   # verifica input password
