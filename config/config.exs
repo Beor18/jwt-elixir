@@ -17,6 +17,10 @@ config :jwtElixir, JwtElixirWeb.Endpoint,
   render_errors: [view: JwtElixirWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: JwtElixir.PubSub, adapter: Phoenix.PubSub.PG2]
 
+config :jwtElixir, JwtElixir.Guardian,
+  issuer: "jwtElixir",
+  secret_key: "+it4fg8ZBuN/2cTixniZSOI6XFiXkiXmTKck/mmRSMAKzAIm7k3eo2HnPfdL2vbo"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
