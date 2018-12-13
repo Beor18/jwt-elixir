@@ -12,3 +12,8 @@ Ahora ingresa a [`localhost:4000`](http://localhost:4000) desde el navegador.
 ## Demo:
 
 ![Imgur](https://i.imgur.com/pdgWSN0.png)
+
+
+## Demo Registro:
+
+![Imgur](https://i.imgur.com/ilvaGGp.png)
