@@ -8,3 +8,7 @@ Para iniciar el server con Phoenix:
   * Iniciar server con `mix phx.server`
 
 Ahora ingresa a [`localhost:4000`](http://localhost:4000) desde el navegador.
+
+## Demo:
+
+![Imgur](https://i.imgur.com/pdgWSN0.png)
