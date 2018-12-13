@@ -8,6 +8,6 @@ defmodule JwtElixirWeb.Router do
   scope "/api/v1", JwtElixirWeb do
     pipe_through :api
 
-    resources "/users", UserController, only: [:create, :show]
+    post "/sign_up", UserController, :create
   end
 end
