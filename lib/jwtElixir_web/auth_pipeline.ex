@@ -1,9 +1,9 @@
-defmodule JwtElixirWeb.Guardian.AuthPipeline do
-    use Guardian.Plug.Pipeline, otp_app: :JwtElixirWeb
-    module: JwtElixirWeb.Guardian,
-    error_handler: JwtElixirWeb.AuthErrorHandler
+defmodule JwtElixir.Guardian.AuthPipeline do
+    use Guardian.Plug.Pipeline, otp_app: :JwtElixir,
+    module: JwtElixir.Guardian,
+    error_handler: JwtElixir.AuthErrorHandler
 
-    plug Guardian.Plug.VerifiHeader, realm: "Bearer"
+    plug Guardian.Plug.VerifyHeader, realm: "Bearer"
     plug Guardian.Plug.EnsureAuthenticated
-    plug Guardiand.Plug.LoadResource
+    plug Guardian.Plug.LoadResource
 end
