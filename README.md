@@ -25,3 +25,7 @@ Ahora ingresa a [`localhost:4000`](http://localhost:4000) desde el navegador.
 ## Demo Ruta Protegida (Mi Usuario):
 
 ![Imgur](https://i.imgur.com/4hq8qs6.png)
+
+## Demo CRUD "Hoteles"
+
+![Imgur](https://i.imgur.com/tqbI6an.png)
