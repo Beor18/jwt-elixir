@@ -26,7 +26,7 @@ defmodule JwtElixirWeb.Router do
 
   scope "/api/v1", JwtElixirWeb.Hoteles do
     pipe_through :api
-    resources "/hoteles", HotelController, except: [:new]
+    resources "/hoteles", HotelController, except: [:new, :edit]
   end
 
   scope "/api/v1", JwtElixirWeb.Hoteles do

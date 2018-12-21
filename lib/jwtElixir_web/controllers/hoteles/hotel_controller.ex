@@ -14,8 +14,6 @@ defmodule JwtElixirWeb.Hoteles.HotelController do
   def create(conn, %{"hotel" => hotel_params}) do
     with {:ok, %Hotel{} = hotel} <- Hoteles.create_hotel(hotel_params) do
       conn
-      |> put_status(:created)
-      |> put_resp_header("location", Routes.hoteles_hotel_path(conn, :show, hotel))
       |> render("show.json", hotel: hotel)
     end
   end
