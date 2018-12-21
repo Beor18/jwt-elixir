@@ -23,5 +23,17 @@ defmodule JwtElixirWeb.Router do
 
     get "/my_user", UserController, :show
   end
+
+  scope "/api/v1", JwtElixirWeb.Hoteles do
+    pipe_through :api
+    resources "/hoteles", HotelController, except: [:new]
+  end
+
+  scope "/api/v1", JwtElixirWeb.Hoteles do
+    pipe_through :api
+
+    get "/hoteles", HotelController, :show
+  end
+
   
 end
