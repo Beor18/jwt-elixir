@@ -1,5 +1,10 @@
 # Jwt autenticación API con Elixir 1.7.3 y Phoenix 1.4
 
+Características:
+
+  * Login y Registro (jwt)
+  * Crud (Create, read, update, delete)
+  * Mostrar información del usuario
 
 Para iniciar el server con Phoenix:
 
