@@ -13,7 +13,7 @@ defmodule JwtElixirWeb.UserView do
   def render("user.json", %{user: user}) do
     %{id: user.id,
       email: user.email,
-      password_hash: user.password_hash}
+      jwt_url: "/api/v1/hoteles"}
   end
 
   def render("jwt.json", %{jwt: jwt}) do
