@@ -12,4 +12,10 @@ defmodule JwtElixir.Guardian do
     {:ok,  resource}
   end
 
+  def resource_from_clai(claims) do
+    id = claims["sub"]
+    hotel = JwtElixir.Hoteles.get_hotel!(id)
+    {:ok, hotel}
+  end
+
 end

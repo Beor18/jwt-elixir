@@ -3,6 +3,7 @@ defmodule JwtElixirWeb.Hoteles.HotelController do
 
   alias JwtElixir.Hoteles
   alias JwtElixir.Hoteles.Hotel
+  alias JwtElixir.Guardian
 
   action_fallback JwtElixirWeb.FallbackController
 
@@ -18,9 +19,9 @@ defmodule JwtElixirWeb.Hoteles.HotelController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    hotel = Hoteles.get_hotel!(id)
-    render(conn, "show.json", hotel: hotel)
+  def show(conn, _params) do
+    hotel = Guardian.Plug.current_resource(conn) 
+    conn |> render(conn, "show.json", hotel: hotel)
   end
 
   def update(conn, %{"id" => id, "hotel" => hotel_params}) do
