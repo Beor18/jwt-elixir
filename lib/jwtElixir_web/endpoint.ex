@@ -40,5 +40,13 @@ defmodule JwtElixirWeb.Endpoint do
     key: "_jwtElixir_key",
     signing_salt: "Yzy7sRbV"
 
+  plug(
+    Corsica,
+    origins: "*",
+    log: [rejected: :error, invalid: :warn, accepted: :debug],
+    allow_headers: ["content-type"],
+    allow_credentials: true
+  )
+
   plug JwtElixirWeb.Router
 end
