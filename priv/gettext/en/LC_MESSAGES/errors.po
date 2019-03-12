@@ -11,8 +11,9 @@ msgstr ""
 "Language: en\n"
 
 ## From Ecto.Changeset.cast/4
-msgid "can't be blank"
-msgstr ""
+#, fuzzy
+msgid "Campo Obligatorio!"
+msgstr "Campo Obligatorio!"
 
 ## From Ecto.Changeset.unique_constraint/3
 msgid "has already been taken"

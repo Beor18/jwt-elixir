@@ -7,10 +7,9 @@
 ## Run `mix gettext.extract` to bring this file up to
 ## date. Leave `msgstr`s empty as changing them here has no
 ## effect: edit them in PO (`.po`) files instead.
-
 ## From Ecto.Changeset.cast/4
-msgid "can't be blank"
-msgstr ""
+msgid "Campo Obligatorio!"
+msgstr "Campo Obligatorio!"
 
 ## From Ecto.Changeset.unique_constraint/3
 msgid "has already been taken"
