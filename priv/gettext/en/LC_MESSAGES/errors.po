@@ -12,7 +12,7 @@ msgstr ""
 
 ## From Ecto.Changeset.cast/4
 #, fuzzy
-msgid "Campo Obligatorio!"
+msgid "can't be blank"
 msgstr "Campo Obligatorio!"
 
 ## From Ecto.Changeset.unique_constraint/3
