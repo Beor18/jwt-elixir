@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: elixir-postgres
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER: stackly
+      POSTGRES_PASSWORD: elixirdb
+    logging:
+      driver: none
+
+  pg_admin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4
+    ports:
+      - "15432:80"
+    environment:
+      - GUNICORN_THREADS=1
+      - PGADMIN_DEFAULT_EMAIL=test@test.com
+      - PGADMIN_DEFAULT_PASSWORD=test
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+     external: true
